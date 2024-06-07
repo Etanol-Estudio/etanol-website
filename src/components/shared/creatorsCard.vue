@@ -7,11 +7,17 @@
     @mouseup="stopDrag"
     @mouseleave="stopDrag"
   >
-    <q-card v-for="card in cards" :key="card.id" class="scroll-card">
+    <q-card v-for="creators in data" :key="creators.id" class="scroll-card">
       <q-card-section>
-        <div class="card-title text-white">{{ card.title }}</div>
-        <div class="card-content text-white">{{ card.content }}</div>
-        <img src="../../assets/image/mascote.png" alt="" class="mt-3" />
+        <div class="text-white font-vt323 text-3xl font-bold">
+          {{ creators.name }}
+        </div>
+        <div class="text-white font-vt323 text-2xl">{{ creators.role }}</div>
+        <img
+          :src="`src/assets/image/creators/${creators.photo}.png`"
+          alt=""
+          class="mt-3"
+        />
       </q-card-section>
     </q-card>
   </div>
@@ -20,18 +26,14 @@
 <script>
 export default {
   name: "HorizontalScrollCards",
+  props: {
+    data: {
+      type: Array,
+      required: true,
+    },
+  },
   data() {
     return {
-      cards: [
-        { id: 1, title: "Nicole Moreira", content: "Developer" },
-        { id: 1, title: "Nicole Moreira", content: "Developer" },
-        { id: 1, title: "Nicole Moreira", content: "Developer" },
-        { id: 1, title: "Nicole Moreira", content: "Developer" },
-        { id: 1, title: "Nicole Moreira", content: "Developer" },
-        { id: 1, title: "Nicole Moreira", content: "Developer" },
-
-        // Adicione mais cards conforme necessário
-      ],
       isDragging: false,
       startX: 0,
       scrollLeft: 0,
@@ -81,17 +83,8 @@ export default {
   width: 200px;
   border: 3px solid #ff2f2f;
   border-color: #ff2f2f;
-  height: 350px;
+  height: 390px;
   width: 300px;
-}
-
-.card-title {
-  font-weight: bold;
-  font-size: 18px;
-}
-
-.card-content {
-  font-size: 14px;
 }
 
 ::-webkit-scrollbar {
