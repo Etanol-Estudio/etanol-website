@@ -1,8 +1,9 @@
 <template>
-  <div class="bg-gray-950">
+  <div class="bg-black">
     <div class="p-8 flex flex-col">
       <div class="text-7xl text-left text-white pb-4 font-squada">Membros</div>
       <Creators :data="creators" />
+      <div class="text-7xl text-left text-white pb-4 font-squada">Projetos</div>
     </div>
   </div>
 </template>

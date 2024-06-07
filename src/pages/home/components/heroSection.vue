@@ -1,14 +1,12 @@
 <template>
-  <div class="teste h-128 flex justify-between px-10 py-16">
-    <div class="max-w-xl">
-      <img src="../../../assets/image/logo.png" class="" />
+  <div class="teste h-128 flex justify-center px-10 py-16">
+    <div class="max-w-3xl">
+      <img src="../../../assets/image/logo.png" />
       <div class="text-white text-5xl font-vt323 text-center">
         Seja bem-vindo ao nosso humilde coletivo de artistas independentes
       </div>
     </div>
-    <div>
-      <img src="../../../assets/EtanolLogo.png" class="h-96" />
-    </div>
+
     <!-- <div class="text-base text-white pb-4">LOREM IPSUM</div>
         <div class="text-4xl text-white">Lorem ipsum dolor sit</div>
         <div class="text-4xl text-white pb-5">Sed quia accusamus vel</div>
@@ -29,7 +27,7 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Clicker+Script&family=Montserrat:wght@100;400;500;800&family=Poppins:wght@300;500;600&display=swap");
 
 .teste {
-  background-image: url("../../../assets/fundo.png");
+  background-color: black;
   background-size: cover;
   background-position: center;
 }

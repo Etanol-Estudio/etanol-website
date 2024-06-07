@@ -15,7 +15,7 @@
             v-if="$q.screen.gt.xs"
             class="flex items-center gap-3 p-2 font-squada text-white text-5xl"
           >
-            <img src="../assets/image/logo2.png" alt="logo" class="h-12" />
+            <img src="../assets/mascote.png" alt="logo" class="h-12" />
             Coletivo Etanol
           </div>
           <div v-else class="flex items-center gap-3 justify-center">

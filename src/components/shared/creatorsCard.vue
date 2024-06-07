@@ -9,15 +9,15 @@
   >
     <q-card v-for="creators in data" :key="creators.id" class="scroll-card">
       <q-card-section>
-        <div class="text-white font-vt323 text-3xl font-bold">
+        <a href="/members" class="creator-name font-vt323 text-3xl font-bold">
           {{ creators.name }}
-        </div>
-        <div class="text-white font-vt323 text-2xl">{{ creators.role }}</div>
-        <img
-          :src="`src/assets/image/creators/${creators.photo}.png`"
-          alt=""
-          class="mt-3"
-        />
+          <div class="text-white font-vt323 text-2xl">{{ creators.role }}</div>
+          <img
+            :src="`src/assets/image/creators/${creators.photo}.png`"
+            alt=""
+            class="mt-3"
+          />
+        </a>
       </q-card-section>
     </q-card>
   </div>
@@ -65,6 +65,14 @@ export default {
 </script>
 
 <style scoped>
+.creator-name:hover {
+  color: #ff2f2f;
+}
+
+.creator-name {
+  color: white;
+}
+
 .horizontal-scroll-container {
   display: flex;
   overflow-x: auto;
@@ -77,7 +85,7 @@ export default {
 }
 
 .scroll-card {
-  background-color: #060606;
+  background-color: black;
   flex: 0 0 auto;
   margin-right: 18px;
   width: 200px;
@@ -95,7 +103,7 @@ export default {
 ::-webkit-scrollbar-thumb {
   background-color: #ff2f2f;
   border-radius: 8px;
-  border: 7px solid #030712;
+  border: 7px solid black;
 }
 
 /* Estiliza a pista da barra de rolagem */
@@ -106,6 +114,6 @@ export default {
 
 /* Estiliza as peças da pista da barra de rolagem */
 ::-webkit-scrollbar-track-piece {
-  background-color: rgb(3 7 18);
+  background-color: black;
 }
 </style>
